@@ -1,0 +1,18 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>
+      Adivina el numero sereto
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+ <!-- <ion-input type="number" placeholder="Number Imput with no label"></ion-input> -->
+  <ion-input type="number" min="1"max="10" [(ngModel)]="num"placeholder="introduce numeros de1 al 10"></ion-input>
+  <p>Elnumero secreto es{{mayorMenor}} {{num}}</p>
+  <button ion-button (click)="compruebaNumero()">Adivina</button>
+  <ion-card *ngIf="mayorMenor">
+    <ion-card-header>ENORABUENA!!!</ion-card-header>
+    <ion-card-content>Has haceptado el numero secreto es {{num}}</ion-card-content>
+  </ion-card>
+</ion-content>
